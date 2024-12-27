@@ -1,6 +1,11 @@
-FROM nginx:alpine
+FROM gcr.io/distroless/nodejs22-debian12
 
-# Copy a custom nginx configuration if needed
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY index.mjs /
 
-RUN echo '<body>v0.1.5</body>' > /usr/share/nginx/html/index.html
+EXPOSE 80
+
+ARG VERSION=dev
+
+ENV VERSION=$VERSION
+
+CMD ["/index.mjs"]
