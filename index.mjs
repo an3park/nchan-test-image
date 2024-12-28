@@ -5,7 +5,9 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' })
   const userInfo = os.userInfo()
   console.log('====================================================================')
-  console.log(req)
+  console.log(`url: ${req.url}`)
+  console.log(`method: ${req.method}`)
+  console.log(`headers: ${JSON.stringify(req.headers, null, 2)}`)
   console.log('====================================================================')
   res.end(
     `<body>version: ${process.env.VERSION}<br />

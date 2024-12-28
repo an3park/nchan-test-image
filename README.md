@@ -1,36 +1,21 @@
-# NGINX with Nchan Module
+# test
 
-This project provides a Docker image for [NGINX](https://nginx.org/) with the [Nchan module](https://nchan.io/) integrated. It's designed to be easily deployable and customizable for your specific needs.
+output example:
 
-## Features
-
-- NGINX Alpine-based image
-- Nchan module integrated
-- Multi-architecture support (amd64, arm64/v8)
-- Automated build and push to GitHub Container Registry (GHCR)
-
-## Usage
-
-Start a container with the latest image:
-
-```sh
-docker run -d -p 80:80 --name nginx-nchan ghcr.io/an3park/nchan-docker:latest
 ```
-
-With custom configuration:
-
-```sh
-docker run -d -p 80:80 -v /path/to/nginx.conf:/etc/nginx/conf.d/default.conf --name nginx-nchan ghcr.io/an3park/nchan-docker:latest
-```
-
-Docker Compose:
-
-```yaml
-services:
-  nginx-nchan:
-    image: ghcr.io/an3park/nchan-docker:latest
-    ports:
-      - '80:80'
-    volumes:
-      - /path/to/nginx.conf:/etc/nginx/conf.d/default.conf
+version: v0.1.6
+hostname: test-image-7f59ffc657-xz798
+user: root
+uid: 0
+gid: 0
+home: /root
+shell: /sbin/nologin
+arch: x64
+platform: linux
+release: 5.15.0-119-generic
+type: Linux
+uptime: 3751201.36
+loadavg: 0.27,0.34,0.33
+freemem: 1684848640
+totalmem: 4101963776
 ```
