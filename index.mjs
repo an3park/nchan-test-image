@@ -23,6 +23,12 @@ const server = http.createServer((req, res) => {
     loadavg: ${os.loadavg()}<br />
     freemem: ${os.freemem()}<br />
     totalmem: ${os.totalmem()}<br />
+    ============================================<br />
+    url: ${req.url}<br />
+    method: ${req.method}<br />
+    headers: <pre>${JSON.stringify(req.headers, null, 2)}</pre><br />
+    ============================================<br />
+    env: <pre>${JSON.stringify(process.env, null, 2)}</pre><br />
     </body>`
   )
 })
